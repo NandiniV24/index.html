@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Playwrite+NL+Guides&family=Playwrite+TZ+Guides&family=Playwrite+US+Trad+Guides&family=Playwrite+VN+Guides&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font awesome kit -->
+    <script src="https://kit.fontawesome.com/27717ce53c.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png">
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        .parent-container {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            width: 35%;
+            margin: 3% 34%;
+            position: relative;
+        }
+
+        .parent-container h1 {
+            margin-left: 30px;
+            color: rgb(95, 87, 87);
+            font-family: sans-serif;
+            font-weight: 100;
+            font-size: 1.7rem;
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .parent-container .fa-xmark {
+            padding-left: 60%;
+            font-size: 1.6rem;
+            color: black;
+        }
+
+        .form-group {
+            width: 95%;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .form-group input {
+            border: 1px solid #cfcfcf;
+            outline: none;
+            border-radius: 10px;
+            padding: 15px;
+            padding-right: 50%;
+        }
+
+        .check {
+            width: 89%;
+            font-size: 0.8rem;
+            accent-color: red;
+            margin-left: -30px;
+        }
+
+        .check p {
+            font-family: sans-serif;
+            font-weight: 300;
+        }
+
+        .check a {
+            text-decoration: none;
+            color: #ef4f5f;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #ef4f5f;
+        }
+
+        .btn-pwd {
+            width: 90%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #cccccc;
+            background-color: #cfcfcf;
+            color: #ffffff;
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        .hr-or {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 0px 30px;
+            margin-top: 2px;
+        }
+
+        .hr-or::before,
+        .hr-or::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid rgba(146, 129, 129, 0.39);
+        }
+
+        .hr-or span {
+            padding: 5px 0.2em;
+            font-size: 1.3rem;
+            color: rgb(95, 87, 87);
+        }
+
+        .btn-google {
+            width: 90%;
+            padding: 13px 5px;
+            font-family: sans-serif;
+            font-size: 1rem;
+            background-color: white;
+            border: 1px solid rgba(146, 129, 129, 0.39);
+            border-radius: 5px;
+            margin-top: 5px;
+            vertical-align: middle;
+        }
+
+        .btn-google:hover {
+            border: 1px solid #e0ebfd;
+            ;
+            cursor: pointer;
+        }
+
+        .btn-google .img {
+            font-size: 19px;
+            margin-right: 15px;
+            padding: 0px 5px;
+            vertical-align: middle;
+        }
+
+        .break {
+            width: 88%;
+            border: 1px solid #e8e8e8;
+            margin-top: 2%;
+        }
+
+        .account-creation {
+            margin: 10px;
+            display: flex;
+            margin-left: 25px;
+            font-family: "Montserrat", serif;
+            font-size: 1rem;
+        }
+
+        .account-creation a {
+            text-decoration: none;
+            color: #f4727fe3;
+            font-family: sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+        }
+
+        .account-creation p {
+            font-family: "Montserrat", serif;
+            font-weight: 400;
+            color: rgb(75, 64, 64);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="parent-container">
+        <div>
+            <h1>Sign Up
+                <a href="">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </h1>
+        </div>
+        <center>
+            <form>
+                <div class="form-group">
+                    <label for="full-name"></label>
+                    <input type="text" placeholder="Full Name" required> <br>
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="check">
+                    <p class="cont"><input type="checkbox" class="custom-checkbox">
+                        I agree to Zomato's <a href="">Terms of Service, Privacy Policy </a> and <a href=""> Content
+                            Policies</a>
+                    </p>
+                </div>
+                <p><button class="btn-pwd">Create account</button></p>
+                <div class="hr-or">
+                    <hr>
+                    <span>or</span>
+                    <hr> <br> <br>
+                </div>
+
+                <button class="btn-google">
+                    <img src="C:\Users\Nandini\OneDrive\Desktop\FullStackPython\FrontEnd\Zomato\images\google1.png"
+                        alt="" width="5%"> Sign in with Google
+                </button> <br> <br>
+
+                <hr class="break">
+
+                <div class="account-creation">
+                    <p>Already have an account? <a href="index.html">Log in </a></p>
+                </div>
+        </center>
+        </form>
+    </section>
+</body>
+
+</html>

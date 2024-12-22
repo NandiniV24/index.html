@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Playwrite+NL+Guides&family=Playwrite+TZ+Guides&family=Playwrite+US+Trad+Guides&family=Playwrite+VN+Guides&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font awesome kit -->
+    <script src="https://kit.fontawesome.com/27717ce53c.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png">
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+
+        .parent-container {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            width: 35%;
+            margin: 4% 35%;
+        }
+
+        .parent-container h1 {
+            margin-left: 20px;
+            color: rgb(95, 87, 87);
+            font-family: sans-serif;
+            font-weight: 100;
+            font-size: 1.7rem;
+            font-family: "Montserrat", serif;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .parent-container .input {
+            font-size: 1rem;
+            color: #ef4f5f;
+        }
+
+        .parent-container .fa-xmark {
+            padding-left: 70%;
+            font-size: 1.6rem;
+            color: black;
+        }
+
+        .phone-input-container {
+            border: 1px solid rgba(146, 129, 129, 0.39);
+            border-radius: 5px;
+            outline: none;
+            padding: 10px 5px;
+            margin: 0% 5%;
+            display: flex;
+            justify-content: first baseline;
+        }
+
+        .phone-input-container .vertical-line {
+            border-left: 1px solid gray;
+            margin-right: 8px;
+        }
+
+        .border-none {
+            border: 0px;
+            outline: none;
+        }
+
+        #phone-number {
+            font-size: 1.1rem;
+            color: #e4e4e4;
+        }
+
+        .phone-input-container:hover {
+            border: 2px solid #009999;
+        }
+
+        .btn-pwd {
+            width: 90%;
+            color: white;
+            background-color: #ef4f5f;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1.1rem;
+            border: none;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        .btn-pwd:hover{
+            background-color: #e03546;
+            cursor: pointer;
+        }
+
+        .hr-or {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 0px 30px;
+            margin-top: 2px;
+        }
+
+        .hr-or::before,
+        .hr-or::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid rgba(146, 129, 129, 0.39);
+        }
+
+        .hr-or span {
+            padding: 5px 0.2em;
+            font-size: 1.5rem;
+            color: rgb(95, 87, 87);
+        }
+
+        .btn-mail {
+            width: 90%;
+            padding: 13px 5px;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            background-color: white;
+            color: rgb(95, 87, 87);
+            border-radius: 5px;
+            border: 1px solid rgba(146, 129, 129, 0.39);
+            cursor: pointer;
+        }
+
+        .btn-mail .fa-envelope {
+            color: #ef4f5f;
+            padding: 0px 5px;
+            font-size: 19px;
+        }
+
+        .btn-mail a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-google {
+            width: 90%;
+            padding: 13px 5px;
+            font-family: sans-serif;
+            font-size: 1rem;
+            background-color: white;
+            border: 1px solid rgba(146, 129, 129, 0.39);
+            border-radius: 5px;
+        }
+
+        .btn-google a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        .btn-google .img {
+            font-size: 19px;
+            margin-right: 15px;
+            padding: 0px 5px;
+        }
+
+        .break {
+            width: 88%;
+            border: 1px solid #e8e8e8;
+            ;
+        }
+
+        .account-creation {
+            margin: 10px;
+            display: flex;
+            margin-left: 25px;
+            font-family: "Montserrat", serif;
+        }
+
+        .account-creation a {
+            text-decoration: none;
+            color: #f4727fe3;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        .account-creation p {
+            font-family: "Montserrat", serif;
+            font-weight: 300;
+            color: rgb(75, 64, 64);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="parent-container">
+        <div>
+            <h1>Login
+                <a href="">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </h1>
+        </div>
+        <center>
+            <form>
+                <div class="phone-input-container">
+                    <select id="country-code" aria-label="Country Code" class="border-none">
+                        <option value="+1">USA +1</option>
+                        <option value="+44">UK +44</option>
+                        <option value="+91">India +91</option>
+                    </select>
+                    <div class="vertical-line"></div>
+                    <input type="tel" id="phone-number" placeholder="Phone" class="border-none"> <br>
+                </div>
+                <p><button class="btn-pwd">Send One Time Password</button></p>
+                <div class="hr-or">
+                    <hr>
+                    <span>or</span>
+                    <hr> <br> <br>
+                </div>
+
+                <button class="btn-mail">
+                    <a href="login.html"><i class="fa-solid fa-envelope"></i> Continue with Email</a>
+                </button> <br> <br>
+
+                <button class="btn-google">
+                    <a href="">
+                        <img src="C:\Users\Nandini\OneDrive\Desktop\FullStackPython\FrontEnd\Zomato\images\google1.png"
+                            alt="" width="5%"> Sign in with Google
+                    </a>
+                </button> <br> <br> <br>
+
+                <hr class="break">
+
+                <div class="account-creation">
+                    <p>New to Zomato? <a href="signup.html">Create account</a></p>
+                </div>
+        </center>
+        </form>
+
+    </section>
+</body>
+
+</html>
